@@ -12,7 +12,7 @@ KERNEL=="video1394*",			GROUP="users"
 
 # Serial devices
 SUBSYSTEM=="tty",			GROUP="users"
-KERNEL=="ttyACM[0-9]*",			GROUP="users", MODE="0660"
+KERNEL=="ttyACM[0-9]*",			GROUP="users", MODE="0777"
 
 # USB serial converters
 SUBSYSTEM=="usb_device", GOTO="usb_serial_start"
