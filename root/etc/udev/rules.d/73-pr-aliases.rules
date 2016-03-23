@@ -9,3 +9,6 @@ SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="Sony Playstation SixAxis/
 
 # Some PS3 controllers use this name
 SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="Sony PLAYSTATION(R)3 Controller", SYMLINK+="sensors/ps3joy"
+
+# For controller when unplugged
+SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="PLAYSTATION(R)3 Controller*", SYMLINK+="sensors/ps3joy"
