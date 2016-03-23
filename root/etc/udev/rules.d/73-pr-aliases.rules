@@ -6,3 +6,6 @@ KERNEL=="ttyUSB[0-9]*", ATTRS{manufacturer}=="FTDI", ATTRS{product}=="FT232R USB
 KERNEL=="ttyUSB[0-9]*", ATTRS{manufacturer}=="Silicon Labs", ATTRS{product}=="Inertia-Link 4200", SYMLINK+="sensors/imu"
 
 SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="Sony Playstation SixAxis/DS3", SYMLINK+="sensors/ps3joy"
+
+# Some PS3 controllers use this name
+SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="Sony PLAYSTATION(R)3 Controller", SYMLINK+="sensors/ps3joy"
