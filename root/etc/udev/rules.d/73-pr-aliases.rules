@@ -12,3 +12,6 @@ SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="Sony PLAYSTATION(R)3 Cont
 
 # For controller when unplugged
 SUBSYSTEMS=="input", KERNEL=="js[0-9]*", ATTRS{name}=="PLAYSTATION(R)3 Controller*", SYMLINK+="sensors/ps3joy"
+
+# USB to serial adapter for serial console
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{manufacturer}=="Prolific Technology Inc.", ATTRS{product}=="USB-Serial Controller", SYMLINK+="prolific"
